@@ -4,7 +4,8 @@
   "description": "Server for csv_react",
   "main": "index.js",
   "scripts": {
-    "dev": "node index"
+    "dev": "node index",
+    "start": "node index"
   },
   "author": "Roland Ruul",
   "license": "ISC",
