@@ -6,7 +6,7 @@ const fs = require('fs');
 const moment = require('moment');
 let results = [];
 
-app.use(cors({ origin: 'https:\/\/ruulr.ee' }));
+app.use(cors());
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -18,6 +18,10 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage }).single('file');
+
+app.get('/', (req, res) => {
+    res.send('CSV Parser by Roland Ruul');
+});
 
 app.post('/upload', (req, res) => {
     upload(req, res, (err) => {
