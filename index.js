@@ -6,7 +6,7 @@ const fs = require('fs');
 const moment = require('moment');
 let results = [];
 
-app.use(cors());
+app.use(cors({ origin: 'https:\/\/ruulr.ee' }));
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
